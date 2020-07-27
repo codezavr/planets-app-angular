@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="email">Please enter your email address</label>
+    <input formControlName="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
+           placeholder="Enter email">
+  </div>
+  <div *ngIf="form.get('email').invalid && form.get('email').touched" class="alert alert-danger" role="alert">
+    Please enter a valid email address
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="submitLoginForm()">Submit</button>
+</form>

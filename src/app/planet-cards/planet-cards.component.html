@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="page-title">
+    <h1 class="display-4">Planets</h1>
+  </div>
+
+  <div class="planets-container row">
+    <div class="col-sm">
+      <div class="ng-container" *ngFor="let planet of planetsList">
+        <planet-card [planet]="planet" (click)="navigateToThePlanet(planet.name)"></planet-card>
+      </div>
+    </div>
+  </div>
+</div>

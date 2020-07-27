@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Prevent images to grow bigger than container
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Add margin-bottom to every planet-card in app, to get more space between them, according to browser page height
+.card {
+  margin-bottom: 1.5vh;
+}
+
+// Global styles for .card-horizontal
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+  .image-square {
+    margin: 1vw;
+    max-width: 35%;
+    height: 15vw;
+    background-size: cover;
+    background-position: center;
+    flex: 1 0 35%;
+  }
+}
+
+@media (max-width: 960px) {
+  .card-horizontal {
+    .image-square {
+      min-width: 200px;
+    }
+  }
+}
